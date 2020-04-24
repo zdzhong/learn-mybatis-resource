@@ -1,0 +1,8 @@
+<mapper namespace="mapper">
+    <select id="selectBlog" parameterType="entry.Blog" resultType="entry.Blog">
+        select * from blog where id = #{id}
+        <if test="null != content">
+            and 1 = 1
+        </if>
+    </select>
+</mapper>
